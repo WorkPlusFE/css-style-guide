@@ -4,22 +4,30 @@
 
 ## 目录
 
-  1. [术语](#terminology)
-    - [规则声明](#rule-declaration)
-    - [选择器](#selectors)
-    - [属性](#properties)
-  1. [CSS](#css)
-    - [格式](#formatting)
-    - [注释](#comments)
-    - [OOCSS 和 BEM](#oocss-and-bem)
-    - [ID 选择器](#id-selectors)
-    - [JavaScript 钩子](#javascript-hooks)
-    - [边框](#border)
+[术语](#-术语)
 
-<a name="terminology"></a>
+  [规则声明](#-规则声明)
+
+  [选择器](#-选择器)
+
+  [属性](#-属性)
+
+[CSS](#-CSS)
+
+  [格式](#-格式)
+
+  [注释](#-注释)
+
+  [OOCSS-和-BEM](#-OOCSS-和-BEM)
+
+  [ID-选择器](#-ID-选择器)
+
+  [JavaScript-钩子](#JavaScript-钩子)
+
+  [边框](#-边框)
+
 ## 术语
 
-<a name="rule-declaration"></a>
 ### 规则声明
 
 我们把一个（或一组）选择器和一组属性称之为 “规则声明”。举个例子：
@@ -31,7 +39,6 @@
 }
 ```
 
-<a name="selectors"></a>
 ### 选择器
 
 在规则声明中，“选择器” 负责选取 DOM 树中的元素，这些元素将被定义的属性所修饰。选择器可以匹配 HTML 元素，也可以匹配一个元素的类名、ID, 或者元素拥有的属性。以下是选择器的例子：
@@ -46,7 +53,6 @@
 }
 ```
 
-<a name="properties"></a>
 ### 属性
 
 最后，属性决定了规则声明里被选择的元素将得到何种样式。属性以键值对形式存在，一个规则声明可以包含一或多个属性定义。以下是属性定义的例子：
@@ -58,10 +64,8 @@
 }
 ```
 
-<a name="css"></a>
 ## CSS
 
-<a name="formatting"></a>
 ### 格式
 
 * 使用 2 个空格作为缩进；
@@ -102,7 +106,6 @@
 }
 ```
 
-<a name="comments"></a>
 ### 注释
 
 * 建议使用行注释代替块注释；
@@ -111,7 +114,6 @@
   - 为什么用到了 z-index
   - 兼容性处理或者针对特定浏览器的 hack
 
-<a name="oocss-and-bem"></a>
 ### OOCSS 和 BEM
 
 出于以下原因，我们鼓励使用 OOCSS 和 BEM 的某种组合：
@@ -158,14 +160,12 @@
   * `.listing-card__title` 是一个元素（element），它属于 `.listing-card` 的一部分，因此块是由元素组成的。
   * `.listing-card--featured` 是一个修饰符（modifier），表示这个块与 `.listing-card` 有着不同的状态或者变化。
 
-<a name="id-selectors"></a>
 ### ID 选择器
 
 在 CSS 中，虽然可以通过 ID 选择元素，但大家通常都会把这种方式列为反面教材。ID 选择器给你的规则声明带来了不必要的高[优先级](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)，而且 ID 选择器是不可重用的。
 
 想要了解关于这个主题的更多内容，参见 [CSS Wizardry 的文章](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/)，文章中有关于如何处理优先级的内容。
 
-<a name="javascript-hooks"></a>
 ### JavaScript 钩子
 
 避免在 CSS 和 JavaScript 中绑定相同的类。否则开发者在重构时通常会出现以下情况：轻则浪费时间在对照查找每个要改变的类，重则因为害怕破坏功能而不敢作出更改。
@@ -176,7 +176,6 @@
 <button class="btn btn-primary js-request-to-book">Request to Book</button>
 ```
 
-<a name="border"></a>
 ### 边框
 
 在定义无边框样式时，使用 `0` 代替 `none`。
